@@ -1,0 +1,38 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4 mb-4">Users</h1>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th scope="col">Email</th>
+        </tr>
+        </thead>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td><%= user.email %></td>
+              <td><% if user.image.attached? %>
+                <%= image_tag user.image.variant(resize: '50x50!') %>
+                <% end %>
+              </td>
+              <td><%= link_to 'Show', user_path(user) %></td>
+              <td><%= link_to 'Edit', edit_user_path(user) %></td>
+              <td><%= link_to 'Destroy', user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div style="padding-top:15px" class="actions text-center"">
+  <%= link_to "Edit Admin profile", edit_admin_registration_path, class: "btn btn-primary"  %>
+  <%= link_to "Admin logout", destroy_admin_session_path, method: :delete, class: "btn btn-danger"  %>
+</div>
+
+

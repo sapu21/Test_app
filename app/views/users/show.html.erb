@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+ 
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address_line %> 
+</p>
+
+
+
+<p>
+  <strong>City:</strong>
+  <%= @user.city %> 
+</p>
+
+<p>
+  <strong>Landmark:</strong>
+  <%= @user.landmark %> 
+</p>
+
+
+<p>
+  <strong>State</strong>
+  <%= @user.state %> 
+</p>
+
+<p>
+  <strong>Pincode</strong>
+  <%= @user.pin_code %>
+</p>
+
+<p>
+  <strong>Street</strong>
+  <%= @user.street %> 
+</p>
+
+
+<p>
+  <strong>Profile Image</strong>
+  <% if @user.image.attached? %>
+    <%= image_tag @user.image.variant(resize: '300x300!') %>
+  <% end %>
+</p>
+
+
+
+
