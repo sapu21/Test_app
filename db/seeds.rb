@@ -7,35 +7,43 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Admin.create!(email: 'sapu@example.com',
              password: 'password',
-             password_confirmation: 'password'
+             password_confirmation: 'password',
+             phone_number: 25826184
              )
 
-User.create!(email: 'user1@example.com',
+user1 = User.create!(email: 'user1@example.com',
               password: 'password',
               password_confirmation: 'password'
              )
 
-User.create!(email: 'user2@example.com',
+user2= User.create!(email: 'user2@example.com',
               password: 'password',
               password_confirmation: 'password'
              )
 
-User.create!(email: 'user3@example.com',
+user3= User.create!(email: 'user3@example.com',
               password: 'password',
               password_confirmation: 'password'
              )
 
-User.create!(email: 'user4@example.com',
+user4= User.create!(email: 'user4@example.com',
               password: 'password',
               password_confirmation: 'password'
               )
 
-User.create!(email: 'user5@example.com',
+user5= User.create!(email: 'user5@example.com',
               password: 'password',
               password_confirmation: 'password'
               )
 
-User.create!(email: 'user6@example.com',
+user6= User.create!(email: 'user6@example.com',
               password: 'password',
               password_confirmation: 'password'
              )
+
+user1.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "1_image.jpg")
+user2.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "2_image.jpg")
+user3.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "3_image.jpg")
+user4.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "4_image.jpg")
+user5.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "5_image.jpg")
+user6.image.attach(io: open('https://picsum.photos/1920/1080'), filename: "6_image.jpg")
